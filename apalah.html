@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script language="JavaScript" type="text/javascript" src="JavaScriptWarisan.js"></script>
+        <style type="text/css">
+        <!--
+        .style1 {color: #FF0000}
+        -->
+        </style>
+        </head>
+        <body onload="fnRef()">
+            <center>
+          <table width="670" border="0" cellspacing="0" cellpadding="0" style="background-color: white;border-radius: 10px;">
+            <tr>
+              <td width="40">&nbsp;</td>
+              <td colspan="2" valign="top">
+                <table border="0" cellspacing="0" cellpadding="2" width="642">
+                  <tr>
+                    <td class="pageName"><p align="center"><b>
+                    <font face="Verdana" size="4">Kalkulator Pembagian Harta Waris</font></b></p><br></td>
+                  </tr>
+                  <tr>
+                    <td class="subHeader" id="monthformat">
+                    <font face="Verdana" size="2">
+                    <strong>Langkah 1 - Hitung Total Harta</strong><a name="Tarikah" id="Tarikah"></a> 
+                    </font> </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="bodyText"><p><font face="Verdana" size="2">Hal yang pertama kali dilakukan dalam <em>faro'idh</em> adalah menghitung seluruh harta yang dimiliki si mayit atau yang dikenal dengan sebutan <em>Tarikah</em> atau <em>Tirkah.</em>
+                        </font>
+                        </p>
+                      <p><font face="Verdana"><strong><font size="2">Masukkan Total Harta<span class="style1">*</span> :</font></strong><font size="2">
+                        </font>
+                        <input type="text" tabindex="1" id="harta" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"/><font size="2">
+                        <br />
+                      </font></font>
+                      </p>
+                  <hr />
+                  <tr>
+                    <td class="subHeader" id="monthformat">
+                    <font face="Verdana" size="2">
+                    <strong>Langkah 2 - Masukkan Hak-hak yang Harus Dipenuhi</strong></font></td>
+                  </tr>
+                  <tr>
+                    <td class="bodyText"><p><font face="Verdana" size="2">Ada hak-hak yang harus dipenuhi sebelum melakukan penghitungan waris. Hak-hak ini diambil dari harta <em>tarikah</em> yang nantinya diperoleh harta <em>irst</em>, yaitu harta yang siap dibagikan kepada ahli waris. Isian di bawah ini boleh tidak diisi. Isi dengan angka tanpa tanda baca.
+                     
+                      </font>
+                     
+                      <p align="left">
+                      <div align="left">
+                        <table width="622" border="0" cellpadding="0">
+                          <tr>
+                            <td width="22"><div align="center">
+                                <font face="Verdana" size="2"><strong>1.</strong></font></div></td>
+                            <td width="370"><div align="left">
+                                <font face="Verdana" size="2"><strong>Hutang yang berkaitan dengan harta: </strong>
+                                </font></div></td>
+                            <td width="222"><strong>
+                              <label>
+                              <font face="Verdana">
+                              <input tabindex="2" type="text" id="hak1" align="right" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"/><font size="2">
+                            </font></font>
+                              </label>
+                            </strong></td>
+                          </tr>
+                          <tr>
+                            <td><div align="center"><font face="Verdana" size="2"><strong>2.</strong></font></div></td>
+                            <td><div align="left"><font face="Verdana" size="2"><strong>Hutang yang tidak berkaitan dengan harta: </strong>
+                                </font></div></td>
+                            <td><strong>
+                              <label>
+                              <font face="Verdana">
+                              <input tabindex="3" type="text" id="hak2" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"/><font size="2">
+                            </font></font>
+                              </label>
+                            </strong></td>
+                          </tr>
+                          <tr>
+                            <td><div align="center"><font face="Verdana" size="2"><strong>3.</strong></font></div></td>
+                            <td><div align="left"><font face="Verdana" size="2"><strong>Biaya penyelenggaraan jenazah: </strong>
+                                </font></div></td>
+                            <td><strong>
+                              <label>
+                              <font face="Verdana">
+                              <input tabindex="4" type="text" id="hak3" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"/><font size="2">
+                            </font></font>
+                              </label>
+                            </strong></td>
+                          </tr>
+                          <tr>
+                            <td><div align="center"><font face="Verdana" size="2"><strong>4.</strong></font></div></td>
+                            <td><div align="left"><font face="Verdana" size="2"><strong>Wasiat (maksimum 1/3 tarikah): </strong>
+                                </font></div></td>
+                            <td><strong>
+                              <label>
+                              <font face="Verdana">
+                              <input tabindex="5" type="text" id="hak4" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"/><font size="2">
+                            </font></font>
+                              </label>
+                            </strong></td>
+                          </tr>
+                        </table>
+                        <table width="420" border="0" cellpadding="0">
+                        </table>
+                      </div>
+                  <tr>
+                    <td class="subHeader" id="monthformat">
+                      <font face="Verdana" size="2">
+                      <br />
+                      </font>
+                      <hr />
+                      <font face="Verdana" size="2">
+                      <strong>Langkah 3 - Masukkan Ahli Waris </strong></font></td>
+                  </tr>
+                  <tr>
+                    <td class="bodyText">
+                      <p><font face="Verdana" size="2">Isi	Jumlah setiap ahli waris yang ditinggalkan si Mayit.
+                      </font>
+                      <p align="left">
+                      <div align="left"></p>
+                        <div align="left">
+                          </p>
+                          <table width="724" border="0">
+                            <tr>
+                              <td width="263"><font face="Verdana" size="2"><strong>1. &nbsp;&nbsp;Anak Laki-Laki </strong>
+                                </font></td>
+                              <td width="102"><strong>
+                                <label>
+                                <font face="Verdana">
+                                <input id="putra" tabindex="6" name="textfield" type="text" size="3" maxlength="3" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"/><font size="2">
+                                </font></font>
+                                  </label>
+                              </strong></td>
+                              <td width="295"><font face="Verdana" size="2"><strong>14. Saudari Kandung </strong>
+                                </font></td>
+                              <td width="46"><strong>
+                                <label>
+                                <font face="Verdana">
+                                <input id="saudariK" tabindex="19" name="textfield2" type="text" size="3" maxlength="3" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" /><font size="2">
+                                </font></font>
+                                  </label>
+                              </strong></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>2. &nbsp;&nbsp;Anak Perempuan </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield3" tabindex="7" type="text" id="putri" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>15. Saudara Sebapak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield15" tabindex="20" type="text" id="saudaraB" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>3. &nbsp;&nbsp;Cucu Laki dari Anak Laki </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield4" tabindex="8" type="text" id="cucuLk" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>16. Saudari Sebapak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield16" tabindex="21" type="text" id="saudariB" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>4. &nbsp;&nbsp;Cucu Perempuan dari Anak Laki </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield5" tabindex="9" type="text" id="cucuPr" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>17. Saudara Seibu </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield17" tabindex="22" type="text" id="saudaraI" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>5. &nbsp;&nbsp;Bapak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield6" tabindex="10" type="text" id="bapak" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>18. Saudari Seibu </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield18" tabindex="23 type="text" id="saudariI" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>6. &nbsp;&nbsp;Ibu </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield7" tabindex="11" type="text" id="ibu" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>19. Putra dari Saudara Sekandung </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield19" tabindex="24" type="text" id="putraSK" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>7. &nbsp;&nbsp;Suami </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield8" tabindex="12" type="text" id="suami" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>20. Putra dari Saudari Sebapak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield20" tabindex="25" type="text" id="putraSB" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>8. &nbsp;&nbsp;Istri </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield9" tabindex="13" type="text" id="istri" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>21. Paman Sekandung </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield21" tabindex="26" type="text" id="pamanK" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>9. &nbsp;&nbsp;Kakek </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield10" tabindex="14" type="text" id="kakek" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>22. Paman Sebapak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield22" tabindex="27" type="text" id="pamanB" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>10. Nenek (Ibu dari Bapak) </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield11" tabindex="15" type="text" id="nenekB" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>23. Putra dari Paman Sekandung </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield23" tabindex="28" type="text" id="putraPK" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>11. Nenek (Ibu dari Ibu) </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield12" tabindex="16" type="text" id="nenekI" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>24. Putra dari Paman Sebapak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield24" tabindex="29" type="text" id="putraPB" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>12. Nenek (Ibu dari Kakek) </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield13" tabindex="17" type="text" id="nenekK" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>25. Pria yang Memerdekakan Budak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield25" tabindex="30" type="text" id="pria" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                            <tr>
+                              <td><font face="Verdana" size="2"><strong>13. Saudara Kandung </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield14" tabindex="18" type="text" id="saudaraK" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                              <td><font face="Verdana" size="2"><strong>26. Wanita yang Memerdekakan Budak </strong>
+                                </font></td>
+                              <td><font face="Verdana"><input name="textfield26" tabindex="31" type="text" id="wanita" style="text-align:right;" onKeyDown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" size="3" maxlength="3" /></font></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                        <center><div id="tabel1">
+            <font face="Verdana" size="2">
+            <!--<table width='537' border='1'>
+                <tr>
+                    <th width='156'>Nama</th>
+                    <th width='201'>Kedudukan</th>
+                    <th width='146'>Ubah / Hapus</th>
+                </tr>
+            </table>-->
+            </font>
+            </div></center>
+            <div align="center"><font face="Verdana"><font size="2"><br />
+                  </font>
+              <input name="submit" tabindex="32" type="submit" id="hitung" onclick="fnHitung()" value="Hitung"/><font size="2">
+                </font>
+              <input name="Refresh" tabindex="33" type="reset" id="Refresh" value="Ulang" onClick="konfirmasi()"/><font size="2">
+                </font></font>
+            </div>
+            <tr>
+                    <td class="subHeader" id="monthformat"> 
+                      <div id="result"><hr /><font face="Verdana" size="2"><strong>Langkah 4 - Hasil </strong>
+                        </font></div></td>
+                  </tr>
+            <tr><td><div align="justify" class="hasil" id="hasil">
+              
+            </div></td></tr>
+                </table>
+                
+          </table>
+        </body>
+        </html>
