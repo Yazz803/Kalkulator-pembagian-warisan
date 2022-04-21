@@ -1,6 +1,6 @@
 body::before {
     content: '';
-    background-image: url(bg2.jpg);
+    background-image: url(bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,4 +12,240 @@ body::before {
     bottom: 0;
     z-index: -1;
     filter: blur(2px);
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sosmed {
+    background-color: black;
+    width: 100px;
+    height: 1000px;
+    position: fixed;
+    z-index: -1;
+}
+nav {
+    background-color: rgb(22, 22, 22);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding: 1px 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact {
+    width: 100%;
+}
+.contact h2, .contact p {
+    color: white;
+    text-align: center;
+}
+.pesan {
+    margin: 50px 7%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 500px;
+    padding-top: 2%;
+}
+.pesan h2, .pesan p {
+    color: black;
+    font-family: heltivica;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 5px white;
+}
+.pesan h2 {
+    font-size: 30px;
+    margin: 0;
+}
+.contact input {
+    float: left;
+    width: 45%;
+    margin: 30px;
+    margin-bottom: 0;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+    border: 0;
+    color: white;
+}
+.contact textarea {
+    float: right;
+    position: absolute;
+    width: 35%;
+    height: 185px;
+    margin-top: 30px;
+    right: 120px;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+    border: 0;
+    color: white;
+}
+.contact input[type=submit] {
+    width: 40%;
+    margin: 5%;
+    margin-left: 33%;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+    border: 0;
+    color: white;
+    border-radius: 1em/2em;
+    cursor: pointer;
+}
+.contact input[type=submit]:hover {
+    background-color: rgb(53, 53, 53);
+    transition: .3s;
+}
+
+div .cr {
+    background-color: black;
+    margin-bottom: -20px;
+    display: flex;
+    padding-left: 40px;
+}
+div .cr p, div .cr a {
+    margin-right: 40px;
+}
+
+div .cr a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+input[type=submit], input[type=reset] {
+    width: 20%;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(34, 34, 34);
+    border: 0;
+    color: white;
+    border-radius: 1em/2em;
+}
+
+.langkah1, .langkah2, .langkah3, .langkah4 {
+    width: 54%;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 0.5em;
+}
+.langkah1, .langkah2, .langkah3, .langkah4 {
+    background-color: rgba(255, 255, 255, 0.76);
+}
+.pesan1, .pesan2, .pesan3 {
+    color: rgb(39, 39, 39);
+    font-style: italic;
+}
+.langkah1title, .langkah2title, .langkah3title, .langkah4title {
+    background-color: rgb(36, 36, 36);
+    margin : -10px;
+    color: white;
+    padding: 10px;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.langkah4title {
+    margin-bottom: 30px;
+}
+
+.hasil {
+    font-weight: bold;
+    font-size: 17px;
+}
+/* .langkah1 input[type=text], .langkah2 input[type=text], .langkah3 input[type=text]{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+} */
+
+@media (max-width: 1000px){
+    nav {
+        font-size: 14px;
+    }
+    .langkah1, .langkah2, .langkah3, .langkah4 {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .pesan1, .pesan2, .pesan3 {
+        font-size: small;
+    }
+    /* contact */
+    .contact {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .pesan {
+        background-color: rgba(255, 255, 255, 0.301);
+        height: 750px;
+        margin: 0;
+    }
+    .contact textarea {
+        float: none;
+        width: 70%;
+        position: relative;
+        margin-left: 9%;
+        right: 0;
+    }
+    .contact h2 {
+        margin-top: 0;
+        padding-top: 5%;
+    }
+    input[type=text] {
+        float: none;
+        margin-left: 9%;
+    }
+    .pesan input[type=text] {
+        width: 70%;
+    }
+    input[type=submit], input[type=reset] {
+        width: 40%;
+        padding: 10px;
+        background-color: rgb(34, 34, 34);
+        border: 0;
+        color: white;
+        border-radius: 1em/2em;
+    }
+    /* end contact */
+    /* contact2 */
+    .contact2 {
+        padding: 5%;
+        float: none;
+    }
+    .contact-info {
+        float: none;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .contact-info h3 {
+        margin-bottom: 0;
+    }
+    .contact-info hr {
+        display: none;
+    }
+    .contact-info svg, .contact-info p {
+        margin-top: 5%;
+    }
+    .socialmedia {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .socialmedia h3 {
+        margin-bottom: 0;
+    }
+    .socialmedia hr {
+        display: none;
+    }
+    .socialmedia svg, .socialmedia p {
+        margin-top: 5%;
+    }
+    /* end contact2 */
+
+    .hasil {
+        font-size: 14px;
+    }
 }
